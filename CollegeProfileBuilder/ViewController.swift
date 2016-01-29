@@ -25,7 +25,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         colleges.append(College(name: "Harvard University", location: "Cambridge, MA", numberOfStudents: 21000, image: UIImage(named: "harvard")!))
         
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return colleges.count
     }
@@ -80,6 +85,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dvc = segue.destinationViewController as! DetailViewController
+        let index = tableView.indexPathForSelectedRow?.row
+        dvc.college = colleges[index!]
+    }
     
 }
 
