@@ -20,9 +20,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         editButton.tag = 0
         
-        colleges.append(College(name: "University of Chicago", location: "Chicago, IL", numberOfStudents: 14467 , image: UIImage(named: "chicago")!))
-        colleges.append(College(name: "University of California", location: "Berkeley, CA", numberOfStudents: 37581, image: UIImage(named: "berkeley")!))
-        colleges.append(College(name: "Harvard University", location: "Cambridge, MA", numberOfStudents: 21000, image: UIImage(named: "harvard")!))
+        colleges.append(College(name: "University of Chicago", location: "Chicago, IL", numberOfStudents: 14467 , image: UIImage(named: "chicago")!, url: NSURL(string: "http://www.uchicago.edu/")!))
+        colleges.append(College(name: "University of California", location: "Berkeley, CA", numberOfStudents: 37581, image: UIImage(named: "berkeley")!, url: NSURL(string: "http://www.berkeley.edu/")!))
+        colleges.append(College(name: "Harvard University", location: "Cambridge, MA", numberOfStudents: 21000, image: UIImage(named: "harvard")!, url: NSURL(string: "http://www.harvard.edu/")!))
         
     }
     
