@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class DetailViewController: UIViewController, SFSafariViewControllerDelegate
+class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
     @IBOutlet weak var locationTextField: UITextField!
 
@@ -23,8 +23,11 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate
     
     var college : College!
     
+    let imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.delegate =  self
         nameTextField.text = college.name
         locationTextField.text = college.location
         studentTextField.text = String(college.numberOfStudents)
@@ -48,6 +51,25 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate
     @IBAction func goToWebsite(sender: AnyObject) {
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imagePicker.dismissViewControllerAnimated(true) { () -> Void in
+            let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.imageView.image = selectedImage
+        }
+    }
 
+    
+    @IBAction func onTappedLibraryButton(sender: AnyObject) {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+
+    @IBAction func onTappedCameraButton(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(.Camera){
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
 
 }

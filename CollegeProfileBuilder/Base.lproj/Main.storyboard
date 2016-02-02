@@ -131,14 +131,33 @@
                                     <constraint firstAttribute="width" constant="250" id="WKF-th-4wb"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uur-5j-1Tn">
+                                <rect key="frame" x="454" y="368" width="61" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="onTappedCameraButton:" destination="H8B-N9-7bH" eventType="touchUpInside" id="mRd-YZ-NEd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0v-Su-0Fn">
+                                <rect key="frame" x="454" y="310" width="61" height="30"/>
+                                <state key="normal" title="Library"/>
+                                <connections>
+                                    <action selector="onTappedLibraryButton:" destination="H8B-N9-7bH" eventType="touchUpInside" id="z0q-0M-y9F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="McC-Wz-8pj" firstAttribute="centerX" secondItem="QZU-qv-kWh" secondAttribute="centerX" id="8VX-mE-hB8"/>
                             <constraint firstItem="piF-yI-nNY" firstAttribute="centerX" secondItem="QZU-qv-kWh" secondAttribute="centerX" id="8X1-Oy-gV8"/>
+                            <constraint firstItem="M0v-Su-0Fn" firstAttribute="leading" secondItem="JCU-bS-lFf" secondAttribute="trailing" constant="10" id="Ihv-eW-pa9"/>
                             <constraint firstItem="mgu-CD-2Gm" firstAttribute="centerX" secondItem="QZU-qv-kWh" secondAttribute="centerX" id="ThS-F8-WX1"/>
                             <constraint firstItem="JCU-bS-lFf" firstAttribute="centerX" secondItem="QZU-qv-kWh" secondAttribute="centerX" id="VpW-9k-zt7"/>
+                            <constraint firstItem="3R1-fu-mIU" firstAttribute="top" secondItem="JCU-bS-lFf" secondAttribute="bottom" constant="15" id="XCD-Qb-g7j"/>
+                            <constraint firstItem="uur-5j-1Tn" firstAttribute="leading" secondItem="JCU-bS-lFf" secondAttribute="trailing" constant="10" id="bR0-sF-xi2"/>
                             <constraint firstItem="ndS-J5-oji" firstAttribute="centerX" secondItem="QZU-qv-kWh" secondAttribute="centerX" id="hej-8N-3a4"/>
                             <constraint firstItem="3R1-fu-mIU" firstAttribute="centerX" secondItem="QZU-qv-kWh" secondAttribute="centerX" id="hjx-ME-6QG"/>
+                            <constraint firstItem="JCU-bS-lFf" firstAttribute="top" secondItem="McC-Wz-8pj" secondAttribute="bottom" constant="20" id="kCL-HE-HVj"/>
                             <constraint firstItem="7Kz-au-VKG" firstAttribute="leading" secondItem="McC-Wz-8pj" secondAttribute="trailing" constant="25" id="zr1-EY-RxG"/>
                         </constraints>
                     </view>
