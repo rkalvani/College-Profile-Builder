@@ -32,7 +32,7 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
         locationTextField.text = college.location
         studentTextField.text = String(college.numberOfStudents)
         imageView.image = college.image
-        //NSURL(string: websiteTextField.text!) = college.url
+        websiteTextField.text = String(college.url!)
         
     }
 
@@ -49,6 +49,10 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
     }
    
     @IBAction func goToWebsite(sender: AnyObject) {
+        let url = college.url
+        let svc = SFSafariViewController(URL: url!)
+        svc.delegate = self
+        self.presentViewController(svc, animated: true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
