@@ -41,6 +41,7 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
         college.location = locationTextField.text!
         college.numberOfStudents = Int(studentTextField.text!)!
         college.url = NSURL(string: websiteTextField.text!)
+        college.image = imageView.image
         nameTextField.resignFirstResponder()
         locationTextField.resignFirstResponder()
         studentTextField.resignFirstResponder()
