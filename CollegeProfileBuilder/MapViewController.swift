@@ -20,7 +20,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapTextField.text = college.name
-        findLocation(mapTextField.text!)
+        findLocation("\(college.name), \(college.location)")
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
