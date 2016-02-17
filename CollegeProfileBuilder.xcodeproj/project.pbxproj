@@ -16,6 +16,7 @@
 		3F1E5B501C56A36F00048958 /* CollegeProfileBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E5B4F1C56A36F00048958 /* CollegeProfileBuilderUITests.swift */; };
 		3F97AD5A1C5AAB6A00966874 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F97AD591C5AAB6A00966874 /* DetailViewController.swift */; };
 		3FB17BED1C59041500AC790B /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB17BEC1C59041500AC790B /* College.swift */; };
+		3FF97D321C74F0ED009AB286 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF97D311C74F0ED009AB286 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3F1E5B511C56A36F00048958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F97AD591C5AAB6A00966874 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3FB17BEC1C59041500AC790B /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
+		3FF97D311C74F0ED009AB286 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				3F1E5B2F1C56A36E00048958 /* AppDelegate.swift */,
 				3F1E5B311C56A36E00048958 /* ViewController.swift */,
 				3F97AD591C5AAB6A00966874 /* DetailViewController.swift */,
+				3FF97D311C74F0ED009AB286 /* MapViewController.swift */,
 				3FB17BEC1C59041500AC790B /* College.swift */,
 				3F1E5B331C56A36E00048958 /* Main.storyboard */,
 				3F1E5B361C56A36E00048958 /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 				3F1E5B321C56A36E00048958 /* ViewController.swift in Sources */,
 				3F1E5B301C56A36E00048958 /* AppDelegate.swift in Sources */,
 				3FB17BED1C59041500AC790B /* College.swift in Sources */,
+				3FF97D321C74F0ED009AB286 /* MapViewController.swift in Sources */,
 				3F97AD5A1C5AAB6A00966874 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

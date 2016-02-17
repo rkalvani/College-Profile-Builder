@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DHx-bs-1Ym">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DHx-bs-1Ym">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -145,9 +145,17 @@
                                     <action selector="onTappedLibraryButton:" destination="H8B-N9-7bH" eventType="touchUpInside" id="z0q-0M-y9F"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AA-AD-MQu">
+                                <rect key="frame" x="374" y="128" width="46" height="30"/>
+                                <state key="normal" title="Map"/>
+                                <connections>
+                                    <segue destination="FGc-Eb-x3n" kind="show" id="Wdy-Jp-bmg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7Kz-au-VKG" firstAttribute="top" secondItem="5AA-AD-MQu" secondAttribute="bottom" constant="46" id="5fa-fg-XAG"/>
                             <constraint firstItem="McC-Wz-8pj" firstAttribute="centerX" secondItem="QZU-qv-kWh" secondAttribute="centerX" id="8VX-mE-hB8"/>
                             <constraint firstItem="piF-yI-nNY" firstAttribute="centerX" secondItem="QZU-qv-kWh" secondAttribute="centerX" id="8X1-Oy-gV8"/>
                             <constraint firstItem="M0v-Su-0Fn" firstAttribute="leading" secondItem="JCU-bS-lFf" secondAttribute="trailing" constant="10" id="Ihv-eW-pa9"/>
@@ -158,6 +166,7 @@
                             <constraint firstItem="ndS-J5-oji" firstAttribute="centerX" secondItem="QZU-qv-kWh" secondAttribute="centerX" id="hej-8N-3a4"/>
                             <constraint firstItem="3R1-fu-mIU" firstAttribute="centerX" secondItem="QZU-qv-kWh" secondAttribute="centerX" id="hjx-ME-6QG"/>
                             <constraint firstItem="JCU-bS-lFf" firstAttribute="top" secondItem="McC-Wz-8pj" secondAttribute="bottom" constant="20" id="kCL-HE-HVj"/>
+                            <constraint firstItem="5AA-AD-MQu" firstAttribute="leading" secondItem="ndS-J5-oji" secondAttribute="trailing" constant="25" id="lJx-vv-jg4"/>
                             <constraint firstItem="7Kz-au-VKG" firstAttribute="leading" secondItem="McC-Wz-8pj" secondAttribute="trailing" constant="25" id="zr1-EY-RxG"/>
                         </constraints>
                     </view>
@@ -172,6 +181,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqq-59-fGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1753" y="334"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="8il-mN-c14">
+            <objects>
+                <viewController id="FGc-Eb-x3n" customClass="MapViewController" customModule="CollegeProfileBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Mn-RL-xGW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vge-TT-cgc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ArM-YA-mwn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7nF-1e-ozh">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vYz-xy-3Hz">
+                                <rect key="frame" x="219" y="108" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7nF-1e-ozh" firstAttribute="leading" secondItem="ArM-YA-mwn" secondAttribute="leadingMargin" constant="-20" id="2DT-61-W20"/>
+                            <constraint firstItem="vYz-xy-3Hz" firstAttribute="centerX" secondItem="ArM-YA-mwn" secondAttribute="centerX" id="7H0-3F-dYz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7nF-1e-ozh" secondAttribute="trailing" constant="-20" id="Jpb-75-ENu"/>
+                            <constraint firstItem="7nF-1e-ozh" firstAttribute="top" secondItem="0Mn-RL-xGW" secondAttribute="bottom" id="QMD-LQ-dl6"/>
+                            <constraint firstItem="Vge-TT-cgc" firstAttribute="top" secondItem="7nF-1e-ozh" secondAttribute="bottom" id="hsd-Lb-EMq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapTextField" destination="vYz-xy-3Hz" id="z77-cD-TCk"/>
+                        <outlet property="mapView" destination="7nF-1e-ozh" id="IaT-Ff-V2L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YdM-Lo-m4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2435" y="334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vbP-FI-x9E">
