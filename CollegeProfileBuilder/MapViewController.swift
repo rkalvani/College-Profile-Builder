@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var mapTextField: UITextField!
     
@@ -21,12 +21,14 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         mapTextField.text = college.name
         findLocation("\(college.name), \(college.location)")
+        mapTextField.delegate = self
+        
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        let locationName = textField.text!
-        textField.resignFirstResponder()
-        findLocation(locationName)
+        let location = mapTextField.text!
+        mapTextField.resignFirstResponder()
+        findLocation(location)
         return true
     }
     
